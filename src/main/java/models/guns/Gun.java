@@ -18,7 +18,7 @@ public abstract class Gun implements IGun {
     }
 
     @Override
-    public Double getDamage() {
+    public final Double getDamage() {
         return Calibre.getCalibreDamage(this.calibre);
     }
 }

@@ -24,6 +24,14 @@ public abstract class Animal implements IAnimal {
         setVitalSigns(animalType);
     }
 
+    /**
+     * @param age
+     * @param weight
+     * @param height
+     * @param animalType
+     * @throws AnimalException
+     * @throws InvalidAnimalException
+     */
     public Animal(Integer age, Integer weight, Integer height, String animalType) throws AnimalException, InvalidAnimalException {
 
         if(age <= 0 || weight <= 0 || height <= 0) {
@@ -48,6 +56,10 @@ public abstract class Animal implements IAnimal {
         setVitalSigns(animalType);
     }
 
+    /**
+     * @param animalType
+     * @throws InvalidAnimalException
+     */
     private void setVitalSigns(String animalType) throws InvalidAnimalException {
         System.out.println(animalType);
         switch (animalType) {
@@ -59,6 +71,9 @@ public abstract class Animal implements IAnimal {
         }
     }
 
+    /**
+     * @param gun
+     */
     public final void getShotBy(Gun gun){
         this.vitalSigns -= gun.getDamage();
     }

@@ -13,14 +13,14 @@ public class GunTest {
     @Test
     public void gunWithMinCalibreDamage() throws AnimalException {
         Gun gun = new Crossbow();
-        Integer expected = 1;
+        Double expected = 2.0;
         Assert.assertEquals(gun.getDamage(), expected);
     }
 
     @Test
     public void gunWithCustomCalibreDamage() throws AnimalException {
         Gun gun = new ColtPistol(Calibre.CALIBRE_22, 10);
-        Integer expected = 10;
+        Double expected = 3.75;
         Assert.assertEquals(gun.getDamage(), expected);
     }
 

@@ -47,7 +47,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void bearHuntingWithRifleFailedTest() {
+    public void bearHuntingWithRifleFailedTest() throws InvalidAnimalException {
         Hunter hunter = new Hunter();
         Gun gun = new RemingtonRifle(Calibre.CALIBRE_45, 750);
         Animal bear = new Bear();
@@ -59,7 +59,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void bearHuntingWithRifleSuccessTest() {
+    public void bearHuntingWithRifleSuccessTest() throws InvalidAnimalException {
         Hunter hunter = new Hunter();
         Gun gun = new RemingtonRifle(Calibre.CALIBRE_45, 750);
         Animal bear = new Bear();
@@ -72,7 +72,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void bearHuntingWithColtFailedTest() {
+    public void bearHuntingWithColtFailedTest() throws InvalidAnimalException {
         Hunter hunter = new Hunter();
         Gun gun = new ColtPistol(Calibre.CALIBRE_22, 10);
         Animal bear = new Bear();
@@ -83,7 +83,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void bearHuntingWithColtSuccessTest() {
+    public void bearHuntingWithColtSuccessTest() throws InvalidAnimalException {
         Hunter hunter = new Hunter();
         Gun gun = new ColtPistol(Calibre.CALIBRE_22, 10);
         Animal bear = new Bear();
