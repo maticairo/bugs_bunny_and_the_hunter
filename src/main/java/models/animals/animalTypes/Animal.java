@@ -61,7 +61,6 @@ public abstract class Animal implements IAnimal {
      * @throws InvalidAnimalException
      */
     private void setVitalSigns(String animalType) throws InvalidAnimalException {
-        System.out.println(animalType);
         switch (animalType) {
             case "StrongAnimal" -> this.vitalSigns = MAX_VITAL_SIGNS;
             case "NormalAnimal" -> this.vitalSigns = NORMAL_VITAL_SIGNS;
